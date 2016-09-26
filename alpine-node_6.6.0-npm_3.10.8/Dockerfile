@@ -13,7 +13,7 @@ ENV NPM_VERSION 3.10.8
 # Let's roll
 RUN	apk update && \
 	apk upgrade && \
-	apk add --update tzdata sudo bash wget && \
+	apk add --update tzdata sudo bash wget python python-dev make g++ git && \
 	cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
 	echo "${TIMEZONE}" > /etc/timezone && \
 	apk add --update nodejs && \
